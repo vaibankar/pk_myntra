@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myntra
+  namespace: myntra
 spec:
   replicas: 1
   selector:
@@ -15,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myntra
-        image: sevenajay/myntra:latest
+        image: 992382496367.dkr.ecr.ap-south-1.amazonaws.com/ecr:latest
         ports:
         - containerPort: 3000   # Use port 3000
 
@@ -24,6 +25,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: myntra-service
+  namespace : myntra
 spec:
   selector:
     app: myntra
