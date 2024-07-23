@@ -33,4 +33,5 @@ spec:
   - protocol: TCP
     port: 80                 # Expose port 80
     targetPort: 3000
-  type: LoadBalancer
+    NodePort: 32002
+  type: NodePort
