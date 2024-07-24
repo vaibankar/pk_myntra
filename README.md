@@ -3,7 +3,7 @@
 
 This is a simple Myntra NodeJS web application that can be built using npm. Myntra-NodeJS dependencies are handled using the package.json at the root directory of the repository.
 
-Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a NodeJS application using SonarQube, Argo CD and Kubernetes:
+Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a NodeJS application using SonarQube, Argo CD and Kind:
 
 Prerequisites:
 
