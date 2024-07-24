@@ -40,3 +40,40 @@ sudo apt update -y
 sudo apt install openjdk-17-jre-headless -y
 java -version
 ```
+
+Install Git
+
+```shell
+sudo apt install git -y
+git --version
+```
+
+Install NodeJS
+
+```shell
+
+```
+
+Install Docker
+
+```
+sudo apt update -y
+sudo apt install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+```
+
+Install Jenkins
+
+```
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+```
