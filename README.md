@@ -20,6 +20,7 @@ Tools Required:
    - Jenkins
    - SonarQube
    - Docker
+   - Kind
    - ArgoCD
 
 ### Configuring Jenkins server
