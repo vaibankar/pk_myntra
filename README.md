@@ -169,8 +169,9 @@ Wait for the Jenkins to be restarted.
         sudo apt-get update
         sudo apt-get install trivy        
         ```
+        
 
-         to scan image using trivy
+        to scan image using trivy
         ```
         trivy image <imageid>
         ```
