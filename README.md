@@ -241,7 +241,7 @@ For DockerHub
    -  Give the username and password and give name as docker-cred in ID
    -  Click Save
 
-![image](https://github.com/user-attachments/assets/4577894e-ef6e-4d55-bfc6-236f69b0106e)
+<img width="1392" hight="768" alt="demo" src="https://i.imgur.com/kx7YEYf.jpeg">
 
 
 
