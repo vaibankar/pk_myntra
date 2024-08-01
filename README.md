@@ -171,7 +171,6 @@ Wait for the Jenkins to be restarted.
         ```
 
          to scan image using trivy
-     
         ```
         trivy image <imageid>
         ```
