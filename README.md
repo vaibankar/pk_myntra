@@ -146,3 +146,35 @@ Install the Required plugins in Jenkins
 <img width="1392" alt="Screenshot 2023-02-01 at 12 17 02 PM" src="https://user-images.githubusercontent.com/43399466/215973898-7c366525-15db-4876-bd71-49522ecb267d.png">
 
 Wait for the Jenkins to be restarted.
+
+**Install SonarQube and Trivy:**
+    - Install SonarQube and Trivy on the EC2 instance to scan for vulnerabilities.
+        
+        sonarqube
+        ```
+        docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+        ```
+        
+        
+        To access: 
+        
+        publicIP:9000 (by default username & password is admin)
+        
+        To install Trivy:
+        ```
+        sudo apt-get install wget apt-transport-https gnupg lsb-release
+        wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+        echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+        sudo apt-get update
+        sudo apt-get install trivy        
+        ```
+        
+        to scan image using trivy
+        ```
+        trivy image <imageid>
+        ```
+        
+        
+**Integrate SonarQube and Configure:**
+    - Integrate SonarQube with your CI/CD pipeline.
+    - Configure SonarQube to analyze code for quality and security issues.
