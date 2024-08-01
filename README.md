@@ -241,6 +241,6 @@ For DockerHub
    -  Give the username and password and give name as docker-cred in ID
    -  Click Save
 
-https://i.imgur.com/Vh9rNiu.jpeg
+![App Screenshot](https://imgur.com/a/85bY4mu)
 
 
