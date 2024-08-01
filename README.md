@@ -169,3 +169,15 @@ Wait for the Jenkins to be restarted.
         sudo apt-get update
         sudo apt-get install trivy        
         ```
+
+         to scan image using trivy
+     
+        ```
+        trivy image <imageid>
+        ```
+        
+        
+### Integrate SonarQube and Configure:
+
+   - Integrate SonarQube with your CI/CD pipeline.
+   - Configure SonarQube to analyze code for quality and security issues.
