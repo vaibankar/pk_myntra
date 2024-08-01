@@ -215,3 +215,30 @@ Now at the right top corner click profile icon ->  My Account -> Security, Under
 ![Screenshot (202)](https://user-images.githubusercontent.com/129657174/230658495-a4ee14e9-df19-4bfa-8cec-0b9ccc3abb76.png)
 
 
+### Configuring Credentials on Jenkins
+
+For SonarQube
+
+   -  Go to Manage Jenkins > Manage Credentials > System > global > Add Credentials
+   -  Select Kind as Secret text
+   -  Copy the Sonarqube Token in Secret box and give name as sonarqube in ID
+   -  Click Save
+
+For Git
+
+   -  Now go to your GitHub Account > Settings > Developer Settings > Personal access tokens > Tokens(classic) > Generate new token (classic)
+   -  Give a name, Select all check boxes, Click Generate token and Copy the token for future use
+   -  Go to Manage Jenkins > Manage Credentials > System > global > Add Credentials
+   -  Select Kind as Secret text
+   -  Copy the Git Secret Token in Secret box and give name as github in ID
+   -  Click Save
+
+For DockerHub
+
+   -  Now go to [DockerHub](https://hub.docker.com/) create a user and create a new repository with name 'Myntra'
+   -  Go to Manage Jenkins > Manage Credentials > System > global > Add Credentials
+   -  Select Kind as Username and Password
+   -  Give the username and password and give name as docker-cred in ID
+   -  Click Save
+
+
