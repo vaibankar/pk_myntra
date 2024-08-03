@@ -118,6 +118,7 @@ Wait for the Jenkins to be restarted.
 
 ## Install Docker:
 
+
 - Set up Docker on the EC2 instance:
 
 ```
@@ -171,10 +172,9 @@ http://<ec2-instance-public-ip>:8080/restart
 
 - EC2 > Instances > Click on <Instance-ID>
 - In the bottom tabs -> Click on Security
-- Security groups
-- Add inbound traffic rules as shown in the image (you can just allow TCP 9000 as well, in my case, I allowed `All traffic`).
+- Security groups -> Edit inbound rules
+- add 9000 Port for SonarQube 
 
-<img width="1187" alt="Screenshot 2023-02-01 at 12 42 01 PM" src="https://user-images.githubusercontent.com/43399466/215975712-2fc569cb-9d76-49b4-9345-d8b62187aa22.png">
 
 
 ### Login to SonarQube using the below URL:
@@ -182,8 +182,8 @@ http://<ec2-instance-public-ip>:8080/restart
 `http://<ec2-instance-public-ip-address>:9000`  [You can get the ec2-instance-public-ip-address from your AWS EC2 console page]
 
 Note: If you are not interested in allowing `All Traffic` to your EC2 instance
-   -  1. Delete the inbound traffic rule for your instance
-   -  2. Edit the inbound traffic rule to only allow custom TCP port `9000`
+   
+   - Edit the inbound traffic rule to only allow custom TCP port `8080`
 
 Hurray !! Now you can access the `SonarQube Server` on `http://<ec2-instance-public-ip-address>:9000` 
    
