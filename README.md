@@ -145,7 +145,7 @@ http://<ec2-instance-public-ip>:8080/restart
 ```
 
 
-### Install SonarQube and Trivy:
+### Install SonarQube:
 
    - Install SonarQube and Trivy on the EC2 instance to scan for vulnerabilities.
         
@@ -158,21 +158,7 @@ http://<ec2-instance-public-ip>:8080/restart
         
         publicIP:9000 (by default username & password is admin)
         
-        To install Trivy:
-     
-        ```
-        sudo apt-get install wget apt-transport-https gnupg lsb-release
-        wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
-        echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
-        sudo apt-get update
-        sudo apt-get install trivy        
-        ```
         
-
-        to scan image using trivy
-        ```
-        trivy image <imageid>
-        ```
         
         
 ### Integrate SonarQube and Configure:
@@ -223,13 +209,6 @@ For SonarQube
    -  Click Save
 
 
-
-
-
-
-
-
-
 For DockerHub
 
    -  Now go to [DockerHub](https://hub.docker.com/) create a user and create a new repository with name 'Myntra'
@@ -237,6 +216,25 @@ For DockerHub
    -  Select Kind as Username and Password
    -  Give the username and password and give name as docker-cred in ID
    -  Click Save
+
+### Install Trivy:
+
+To install Trivy:
+     
+        ```
+        sudo apt-get install wget apt-transport-https gnupg lsb-release
+        wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+        echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+        sudo apt-get update
+        sudo apt-get install trivy        
+        ```
+        
+
+        to scan image using trivy
+        ```
+        trivy image <imageid>
+        ```
+
 
 <img width="400" hight="400" alt="demo" src="https://i.imgur.com/kx7YEYf.jpeg">
 
