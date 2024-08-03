@@ -237,7 +237,7 @@ To scan image using trivy:
         ```
 
 
-### Intsall Kind:
+### Install Kind:
 
 - Set up Kind on the EC2 instance:
 
