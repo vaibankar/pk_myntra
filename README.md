@@ -357,11 +357,11 @@ Click on ``CREATE APPLICATION``
 
 ![Screenshot ](https://i.imgur.com/AQ0sFiS.png)
    
-![Screenshot ](https://user-images.githubusercontent.com/129657174/230665046-983db740-2435-402f-8f5d-be4bad15c32a.png)
+![Screenshot ](https://i.imgur.com/NTMNyuN.png)
    
 Now click ``CREATE``
    
-![Screenshot ](https://user-images.githubusercontent.com/129657174/230662205-e2adaa8f-37a4-4d16-9a2f-cd9f3a5d2fd8.png)
+![Screenshot ](https://i.imgur.com/sZvRRas.png)
 
 
 
