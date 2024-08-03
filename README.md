@@ -248,7 +248,12 @@ To scan image using trivy:
      [ $(uname -m) = aarch64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.23.0/kind-linux-arm64
      chmod +x ./kind
      sudo mv ./kind /usr/local/bin/kind
-     sudo apt install kind -y
+     ```
+
+- Set up kind cluster:
+
+     ```
+     kind create cluster --image kindest/node:v1.30.0@sha256:047357ac0cfea04663786a612ba1eaba9702bef25227a794b52890dd8bcd692e --name <your_cluster_name> --config config.yml
      ```
 
 <img width="400" hight="400" alt="demo" src="https://i.imgur.com/kx7YEYf.jpeg">
