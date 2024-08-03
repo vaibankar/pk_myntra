@@ -338,5 +338,31 @@ Now copy the ip-address of example-argocd-service, paste it in the browser, in m
 
 Username is 'admin' and for password
 
+```
+kubectl get secret
+kubectl edit secret example-argocd-cluster
+```
+
+Copy the encoded secret
+
+```
+echo <encoded-secret> | base64 -d
+```
+
+![Screenshot (198)](https://user-images.githubusercontent.com/129657174/230660575-26bf787f-aff7-4aa4-8556-eee26ae6407d.png)
+   
+Click on ``CREATE APPLICATION``
+   
+![Screenshot (210)](https://user-images.githubusercontent.com/129657174/230662104-cf1864f3-c2db-4d8e-ad09-75a718feda99.png)
+
+![Screenshot (207)](https://user-images.githubusercontent.com/129657174/230662167-b1ac35c0-5de5-4a40-8a76-575a99954f3d.png)
+   
+![Screenshot (208)](https://user-images.githubusercontent.com/129657174/230665046-983db740-2435-402f-8f5d-be4bad15c32a.png)
+   
+Now click ``CREATE``
+   
+![Screenshot (212)](https://user-images.githubusercontent.com/129657174/230662205-e2adaa8f-37a4-4d16-9a2f-cd9f3a5d2fd8.png)
+
+
 
 
