@@ -227,6 +227,7 @@ To install Trivy:
         sudo apt-get update
         sudo apt-get install trivy        
         ```
+
         
 
         to scan image using trivy
