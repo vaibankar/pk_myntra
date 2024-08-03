@@ -213,7 +213,7 @@ For DockerHub
    -  Now go to [DockerHub](https://hub.docker.com/) create a user and create a new repository with name 'Myntra'
    -  Go to Manage Jenkins > Manage Credentials > System > global > Add Credentials
    -  Select Kind as Username and Password
-   -  Give the username and password and give name as docker-cred in ID
+   -  Give the username and password and give your `Dockerhub username` and `Dockerhub Password` id is `docker`.
    -  Click Save
 
 ### Install Trivy:
