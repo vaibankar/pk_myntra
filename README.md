@@ -116,7 +116,9 @@ Install the Required plugins in Jenkins
 Wait for the Jenkins to be restarted.
 
 
-Install Docker
+## Install Docker:
+
+- Set up Docker on the EC2 instance:
 
 ```
 sudo apt update -y
