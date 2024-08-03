@@ -353,7 +353,7 @@ copy the decoded secret  password and login
    
 Click on ``CREATE APPLICATION``
    
-![Screenshot ](https://i.imgur.com/80FcH01.png)
+![Screenshot ](https://i.imgur.com/t31vqVp.png)
 
 ![Screenshot ](https://i.imgur.com/AQ0sFiS.png)
    
