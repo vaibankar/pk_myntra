@@ -237,6 +237,14 @@ To scan image using trivy:
         ```
 
 
+### Intsall Kind:
+
+- Set up Kind on the EC2 instance:
+
+     ```
+
+     ```
+
 <img width="400" hight="400" alt="demo" src="https://i.imgur.com/kx7YEYf.jpeg">
 
 
