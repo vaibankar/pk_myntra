@@ -230,7 +230,8 @@ To install Trivy:
 
         
 
-        to scan image using trivy
+To scan image using trivy:
+        
         ```
         trivy image <imageid>
         ```
