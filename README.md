@@ -248,6 +248,7 @@ To scan image using trivy:
      [ $(uname -m) = aarch64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.23.0/kind-linux-arm64
      chmod +x ./kind
      sudo mv ./kind /usr/local/bin/kind
+     sudo apt install kind -y
      ```
 
 <img width="400" hight="400" alt="demo" src="https://i.imgur.com/kx7YEYf.jpeg">
