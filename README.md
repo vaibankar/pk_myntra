@@ -182,7 +182,7 @@ http://<ec2-instance-public-ip>:8080/restart
 `http://<ec2-instance-public-ip-address>:9000`  [You can get the ec2-instance-public-ip-address from your AWS EC2 console page]
 
    
-   - Edit the inbound traffic rule to only allow custom TCP port `8080`
+   - Edit the inbound traffic rule to only allow custom TCP port `9000`
 
 Hurray !! Now you can access the `SonarQube Server` on `http://<ec2-instance-public-ip-address>:9000` 
    
