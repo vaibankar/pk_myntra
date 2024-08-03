@@ -322,7 +322,7 @@ kubectl edit svc example-argocd-server
 ```
 
 
-Change `type: ClusterIP` to `type: NodePort` and also change nodeport:`port no.`
+Change `type: ClusterIP` to `type: NodePort` and also change in http nodeport:`port no.`
 
  
 ```
