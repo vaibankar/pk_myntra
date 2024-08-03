@@ -181,7 +181,6 @@ http://<ec2-instance-public-ip>:8080/restart
 
 `http://<ec2-instance-public-ip-address>:9000`  [You can get the ec2-instance-public-ip-address from your AWS EC2 console page]
 
-Note: If you are not interested in allowing `All Traffic` to your EC2 instance
    
    - Edit the inbound traffic rule to only allow custom TCP port `8080`
 
