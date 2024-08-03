@@ -290,11 +290,12 @@ This Operator will be installed in the "operators" namespace and will be usable 
 kubectl get csv -n operators
 ``
 
+
 The following example shows the most minimal valid manifest to create a new Argo CD cluster with the default configuration.
 
-```
-vim argocd-basic.yaml
+- create argocd-basic.yaml file and past below content:
 
+```
 apiVersion: argoproj.io/v1beta1
 kind: ArgoCD
 metadata:
@@ -304,26 +305,33 @@ metadata:
 spec: {}
 ```
 
+
 ```
 kubectl create -f argocd-basic.yaml
 kubectl get pods
 kubectl get svc
 ```
 
+
 ***Note***  It will take some time to bring up the pods
 
 Once the pods are up change the ClusterIP service to Nodeport to access Argo CD UI
+
 
 ```
 kubectl edit svc example-argocd-server
 ```
 
+
 Change `type: ClusterIP` to `type: NodePort`
-   
+
+ 
 ```
 kubectl get pods
 kubectl get svc
 ```
+
+
 
 <img width="400" hight="400" alt="demo" src="https://i.imgur.com/kx7YEYf.jpeg">
 
