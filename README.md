@@ -116,6 +116,33 @@ Install the Required plugins in Jenkins
 Wait for the Jenkins to be restarted.
 
 
+Install Docker
+
+```
+sudo apt update -y
+sudo apt install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+```
+
+
+Grant Jenkins user and ubuntu user permission to docker deamon.
+
+```
+sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker
+```
+
+Once you are done with the above steps, it is better to restart Jenkins.
+
+```
+http://<ec2-instance-public-ip>:8080/restart
+```
+
+
 ### Install SonarQube and Trivy:
 
    - Install SonarQube and Trivy on the EC2 instance to scan for vulnerabilities.
@@ -194,31 +221,7 @@ For SonarQube
    -  Click Save
 
 
-Install Docker
 
-```
-sudo apt update -y
-sudo apt install docker.io -y
-sudo systemctl enable docker
-sudo systemctl start docker
-sudo systemctl status docker
-```
-
-
-Grant Jenkins user and ubuntu user permission to docker deamon.
-
-```
-sudo su - 
-usermod -aG docker jenkins
-usermod -aG docker ubuntu
-systemctl restart docker
-```
-
-Once you are done with the above steps, it is better to restart Jenkins.
-
-```
-http://<ec2-instance-public-ip>:8080/restart
-```
 
 
 
