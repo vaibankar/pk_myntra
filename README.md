@@ -276,7 +276,7 @@ Go to operatorhub.io, search for ArgoCD and click `Install` [Install Argo CD](ht
 curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.28.0/install.sh | bash -s v0.28.0
 ```
 
--  Install the operator by running the following command:What happens when I execute this command?
+-  Install the operator by running the following command:What happens when I execute this command:
 
 ```
 kubectl create -f https://operatorhub.io/install/argocd-operator.yaml
@@ -284,11 +284,11 @@ kubectl create -f https://operatorhub.io/install/argocd-operator.yaml
 
 This Operator will be installed in the "operators" namespace and will be usable from all namespaces in the cluster.
 
--  After install, watch your operator come up using next command.
+-  After install, watch your operator come up using next command:
 
 ```
 kubectl get csv -n operators
-``
+```
 
 
 The following example shows the most minimal valid manifest to create a new Argo CD cluster with the default configuration.
@@ -304,7 +304,6 @@ metadata:
     example: basic
 spec: {}
 ```
-
 
 ```
 kubectl create -f argocd-basic.yaml
