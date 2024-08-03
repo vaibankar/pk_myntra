@@ -332,7 +332,7 @@ kubectl get svc
 
 ***Note***  As we are using Nodeport service we can access ArgoCD UI within the network
 
-Now copy the ip-address of example-argocd-service, paste it in the browser, in my case am using virtual box
+Now copy the ip-address of ec2 instance paste it in the browser.
    
 ![Screenshot ](https://i.imgur.com/HBzI2ey.png)
 
