@@ -115,32 +115,6 @@ Install the Required plugins in Jenkins
 
 Wait for the Jenkins to be restarted.
 
-Install Docker
-
-```
-sudo apt update -y
-sudo apt install docker.io -y
-sudo systemctl enable docker
-sudo systemctl start docker
-sudo systemctl status docker
-```
-
-
-Grant Jenkins user and ubuntu user permission to docker deamon.
-
-```
-sudo su - 
-usermod -aG docker jenkins
-usermod -aG docker ubuntu
-systemctl restart docker
-```
-
-Once you are done with the above steps, it is better to restart Jenkins.
-
-```
-http://<ec2-instance-public-ip>:8080/restart
-```
-
 
 ### Install SonarQube and Trivy:
 
@@ -219,14 +193,37 @@ For SonarQube
    -  Copy the Sonarqube Token in Secret box and give name as sonarqube in ID
    -  Click Save
 
-For Git
 
-   -  Now go to your GitHub Account > Settings > Developer Settings > Personal access tokens > Tokens(classic) > Generate new token (classic)
-   -  Give a name, Select all check boxes, Click Generate token and Copy the token for future use
-   -  Go to Manage Jenkins > Manage Credentials > System > global > Add Credentials
-   -  Select Kind as Secret text
-   -  Copy the Git Secret Token in Secret box and give name as github in ID
-   -  Click Save
+Install Docker
+
+```
+sudo apt update -y
+sudo apt install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+```
+
+
+Grant Jenkins user and ubuntu user permission to docker deamon.
+
+```
+sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker
+```
+
+Once you are done with the above steps, it is better to restart Jenkins.
+
+```
+http://<ec2-instance-public-ip>:8080/restart
+```
+
+
+
+
+
 
 For DockerHub
 
