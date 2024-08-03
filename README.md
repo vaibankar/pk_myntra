@@ -266,6 +266,65 @@ sudo mv ./kind /usr/local/bin/kind
 kind create cluster --image kindest/node:v1.30.0@sha256:047357ac0cfea04663786a612ba1eaba9702bef25227a794b52890dd8bcd692e --name <your_cluster_name> --config config.yml
 ```
 
+### Configure ArgoCD
+
+Go to operatorhub.io, search for ArgoCD and click `Install` [Install Argo CD](https://operatorhub.io/operator/argocd-operator) 
+
+   -  Install Operator Lifecycle Manager (OLM), a tool to help manage the Operators running on your cluster.
+
+```
+curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.28.0/install.sh | bash -s v0.28.0
+```
+
+   -  Install the operator by running the following command:What happens when I execute this command?
+
+```
+kubectl create -f https://operatorhub.io/install/argocd-operator.yaml
+```
+
+This Operator will be installed in the "operators" namespace and will be usable from all namespaces in the cluster.
+
+   -  After install, watch your operator come up using next command.
+
+```
+kubectl get csv -n operators
+``
+
+The following example shows the most minimal valid manifest to create a new Argo CD cluster with the default configuration.
+
+```
+vim argocd-basic.yaml
+
+apiVersion: argoproj.io/v1beta1
+kind: ArgoCD
+metadata:
+  name: example-argocd
+  labels:
+    example: basic
+spec: {}
+```
+
+```
+kubectl create -f argocd-basic.yaml
+kubectl get pods
+kubectl get svc
+```
+
+***Note***  It will take some time to bring up the pods
+
+Once the pods are up change the ClusterIP service to Nodeport to access Argo CD UI
+
+```
+kubectl edit svc example-argocd-server
+```
+
+Change `type: ClusterIP` to `type: NodePort`
+   
+```
+kubectl get pods
+kubectl get svc
+```
+
 <img width="400" hight="400" alt="demo" src="https://i.imgur.com/kx7YEYf.jpeg">
 
 
