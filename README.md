@@ -62,49 +62,21 @@ curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 sudo apt install nodejs -y
 ```
 
-Install Docker
-
-```
-sudo apt update -y
-sudo apt install docker.io -y
-sudo systemctl enable docker
-sudo systemctl start docker
-sudo systemctl status docker
-```
-
-
-Grant Jenkins user and ubuntu user permission to docker deamon.
-
-```
-sudo su - 
-usermod -aG docker jenkins
-usermod -aG docker ubuntu
-systemctl restart docker
-```
-
-As we installed many tools, its better to restart the server
-
-```
-sudo reboot now
-```
 
 **Note: ** By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
 
 - EC2 > Instances > Click on <Instance-ID>
 - In the bottom tabs -> Click on Security
-- Security groups
-- Add inbound traffic rules as shown in the image (you can just allow 8080).
+- Security groups -> Edit inbound rules
+- add 8080 Port for jenkins 
 
-<img width="1187" alt="Screenshot 2023-02-01 at 12 42 01 PM" src="https://user-images.githubusercontent.com/43399466/215975712-2fc569cb-9d76-49b4-9345-d8b62187aa22.png">
 
 
 ### Login to Jenkins using the below URL:
 
 `http://<ec2-instance-public-ip-address>:8080`  [You can get the ec2-instance-public-ip-address from your AWS EC2 console page]
 
-Note: If you are not interested in allowing `All Traffic` to your EC2 instance
-   -  1. Delete the inbound traffic rule for your instance
-   -  2. Edit the inbound traffic rule to only allow custom TCP port `8080`
+   - Edit the inbound traffic rule to only allow custom TCP port `8080`
 
 After you login to Jenkins, 
       - Run the command to copy the Jenkins Admin Password - `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
@@ -132,14 +104,40 @@ Install the Required plugins in Jenkins
 
    - Log in to Jenkins.
    - Go to Manage Jenkins > Manage Plugins.
-   - In the Available tab, search for `Docker Pipeline`,`CloudBees Docker Build and Publish plugin`,`Docker plugin`,`docker-build-step
-     `,`SonarQube Scanner`.
+   - In the Available tab, search for `Docker Pipeline`.
    - Select the plugins and click the Install button.
    - Restart Jenkins after the plugin is installed. `http://<ec2-instance-public-ip-address>:8080/restart`
    
 <img width="1392" alt="Screenshot 2023-02-01 at 12 17 02 PM" src="https://user-images.githubusercontent.com/43399466/215973898-7c366525-15db-4876-bd71-49522ecb267d.png">
 
 Wait for the Jenkins to be restarted.
+
+Install Docker
+
+```
+sudo apt update -y
+sudo apt install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+```
+
+
+Grant Jenkins user and ubuntu user permission to docker deamon.
+
+```
+sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker
+```
+
+Once you are done with the above steps, it is better to restart Jenkins.
+
+```
+http://<ec2-instance-public-ip>:8080/restart
+```
+
 
 ### Install SonarQube and Trivy:
 
