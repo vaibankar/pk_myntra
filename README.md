@@ -242,7 +242,12 @@ To scan image using trivy:
 - Set up Kind on the EC2 instance:
 
      ```
-
+     # For AMD64 / x86_64
+     [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.23.0/kind-linux-amd64
+     # For ARM64
+     [ $(uname -m) = aarch64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.23.0/kind-linux-arm64
+     chmod +x ./kind
+     sudo mv ./kind /usr/local/bin/kind
      ```
 
 <img width="400" hight="400" alt="demo" src="https://i.imgur.com/kx7YEYf.jpeg">
