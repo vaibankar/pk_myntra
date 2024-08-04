@@ -364,7 +364,7 @@ Now click ``CREATE``
 ![Screenshot ](https://i.imgur.com/sZvRRas.png)
 
 
-### Install Prometheus and Grafana using Helm:
+### Install Prometheus using Helm:
 
 - Set up Prometheus and Grafana to monitor your application.
 
