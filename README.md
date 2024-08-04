@@ -396,9 +396,19 @@ kubectl get svc
 
 - Expose Prometheus Service
 
+- This is required to access prometheus-server using your browser.
 
 
+```
+kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-ext
+```
 
+```
+kubectl get svc
+```
+
+***Note*** Edit your service and change in http nodeport:`port no.` 
+           copy the EC2 instance public ip and past in your browser
 
 
 
