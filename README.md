@@ -312,7 +312,7 @@ kubectl get svc
 ```
 
 
-***Note***  It will take some time to bring up the pods
+***Note***:  It will take some time to bring up the pods
 
 Once the pods are up change the ClusterIP service to Nodeport to access Argo CD UI
 
@@ -330,7 +330,7 @@ kubectl get pods
 kubectl get svc
 ```
 
-***Note***  As we are using Nodeport service we can access ArgoCD UI within the network
+***Note***:  As we are using Nodeport service we can access ArgoCD UI within the network
 
 Now copy the ip-address of ec2 instance paste it in the browser.
    
@@ -407,11 +407,13 @@ kubectl expose service prometheus-server --type=NodePort --target-port=9090 --na
 kubectl get svc
 ```
 
-***Note*** Edit your service and change in http nodeport:`port no.` and copy the EC2 instance public ip and past in your browser.
+***Note***:  Edit your service and change in the http nodeport:`port no.` and copy the EC2 instance public ip and past in your browser.
 
 ```
 kubectl edit svc prometheus-server-ext
 ```
+
+![Screenshot ](https://i.imgur.com/6wgnFVh.png)
 
 ### Install Grafana using Helm:
 
@@ -449,9 +451,11 @@ kubectl expose service grafana --type=NodePort --target-port=3000 --name=grafana
 kubectl get svc
 ```
 
-***Note***: Edit your service and change in http nodeport:`port no.` and copy the EC2 instance public ip and past in your browser.
+***Note***:  Edit your service and change in the http nodeport:`port no.` and copy the EC2 instance public ip and past in your browser.
 
-
+```
+kubectl edit svc grafana-ext
+```
 
 
 
