@@ -409,6 +409,9 @@ kubectl get svc
 
 ***Note*** Edit your service and change in http nodeport:`port no.` and copy the EC2 instance public ip and past in your browser.
 
+```
+kubectl edit svc prometheus-server-ext
+```
 
 ### Install Grafana using Helm:
 
@@ -442,10 +445,11 @@ kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-passwor
 kubectl expose service grafana --type=NodePort --target-port=3000 --name=grafana-ext
 ```
 
+```
+kubectl get svc
+```
 
-
-
-
+***Note***: Edit your service and change in http nodeport:`port no.` and copy the EC2 instance public ip and past in your browser.
 
 
 
