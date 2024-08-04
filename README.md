@@ -435,11 +435,6 @@ helm repo update
 helm install grafana grafana/grafana
 ```
 
-- Grafana username is 'admin' and for password
-
-```
-kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
-```
 
 - Expose Grafana Service
 
@@ -457,12 +452,27 @@ kubectl get svc
 kubectl edit svc grafana-ext
 ```
 
+- Grafana username is 'admin' and for password
 
+```
+kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+```
 
+![Screenshot ](https://i.imgur.com/8zvbZ0p.png)
 
+- Create Prometheus as data source for your Grafana: 
+    
+    - Click on Data Source
+    - Click on Add data source
+    - Select Prometheus
+    - Provide your Prometheus ip adderess
+    - Save & Test
 
-
-
-
-
+- Create Dashboard:
+     
+    - Click on Dashboard
+    - Select Import Dashboard
+    - Past the Dashboard ID `15661` and click on load
+    - Select the default Prometheus
+    - Click on Import
 
