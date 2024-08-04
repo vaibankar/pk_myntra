@@ -407,21 +407,28 @@ kubectl expose service prometheus-server --type=NodePort --target-port=9090 --na
 kubectl get svc
 ```
 
-***Note*** Edit your service and change in http nodeport:`port no.` 
-           copy the EC2 instance public ip and past in your browser
+***Note*** Edit your service and change in http nodeport:`port no.` and copy the EC2 instance public ip and past in your browser.
 
 
+### Install Grafana using Helm:
 
+- Add helm repo
 
+```
+helm repo add grafana https://grafana.github.io/helm-charts
+```
 
+- Update helm repo
 
+```
+helm repo update
+```
 
+- Install Grafana
 
-
-
-
-
-
+```
+helm install grafana grafana/grafana
+```
 
 
 
