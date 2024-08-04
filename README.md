@@ -364,20 +364,76 @@ Now click ``CREATE``
 ![Screenshot ](https://i.imgur.com/sZvRRas.png)
 
 
-### Install Prometheus and Grafana:
+### Install Prometheus and Grafana using Helm:
 
 - Set up Prometheus and Grafana to monitor your application.
-
-Pre-Requisites:
-
-- Helm
-
-```
-helm install prometheus prometheus-community/prometheus
-```  
 
 - Add helm repo
 
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 ```
+
+- Update helm repo
+
+```
+helm repo update
+```
+
+- Install prometheus controller
+
+```
+helm install prometheus prometheus-community/prometheus
+```
+
+```
+kubectl get pods
+```
+
+```
+kubectl get svc
+```
+
+- Expose Prometheus Service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
