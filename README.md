@@ -368,3 +368,16 @@ Now click ``CREATE``
 
 - Set up Prometheus and Grafana to monitor your application.
 
+Pre-Requisites:
+
+- Helm
+
+```
+helm install prometheus prometheus-community/prometheus
+```  
+
+- Add helm repo
+
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+```
