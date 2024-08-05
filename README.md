@@ -236,6 +236,18 @@ To scan image using trivy:
 trivy image <imageid>
 ```
 
+
+
+### Install kubectl:
+
+- Set up kubectl on EC2 instance:
+
+```
+curl -LO https://dl.k8s.io/release/v1.30.0/bin/linux/amd64/kubectl
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --client
+```
+
 ***Note***:  Before install Kind cluster you should create `config.yml` file and past below content then you can create your Kind cluster
 
 ```
@@ -263,16 +275,6 @@ nodes:
       protocol: TCP
 ```
 
-
-### Install kubectl:
-
-- Set up kubectl on EC2 instance:
-
-```
-curl -LO https://dl.k8s.io/release/v1.30.0/bin/linux/amd64/kubectl
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-kubectl version --client
-```
 
 
 ### Install Kind:
